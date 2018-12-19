@@ -1,0 +1,916 @@
+/* #8EF0D3 = cyan muda */
+/* #7BC4EF = biru muda */
+/* #B8EF7B = hijau muda */
+/* #FFC0CB = pink */
+
+html body { height: 100%; }
+html { max-width: 2000px; font-family: Serif; }
+body {
+	margin: 0; padding: 0; 
+	background-image: url("/apl/gambar/db_bg_m_600.jpg");
+  	background-position: center center;
+  	background-repeat: repeat-y;
+  	background-attachment: fixed;
+  	background-size: cover;
+  	background-color: #ffffff;
+}
+
+* { box-sizing: border-box; }
+.row::after { content: ""; clear: both; display: table; }
+
+.header {
+	font-family: "Lucida Sans", sans-serif;
+	margin: 0; padding: 0; text-align: center;
+   background-color: blue; color: #ffffff; font-weight: bold;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.8); font-size: 0.8em;
+	-webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0 3px 5px rgba(0,0,0,0.8);
+	position: fixed; width: 100%; height: 40px; z-index: 990;
+}
+
+.logout { 
+	height: 30px; font-family: "Lucida Sans"; position: fixed; left: 0; top: 0; background-color: purple;
+	z-index: 991; font-size: 0.8em; display: inline-block; color: white; margin-top: 4px; margin-bottom: 4px ; 
+	padding: 4px 10px 4px 0; border: 1px solid black; border-radius: 0 10px 10px 0;
+}
+
+.logout span { line-height: 20px; }
+.logout a:hover { background-color: rgba(0,0,0,0.5); }
+
+.logouto {
+	font-family: sans-serif; position: fixed; left: 0; top: 0; background-color= rgba(0,0,255,0.5);
+	z-index: 991; font-size: 0.8em; display: inline-block; line-height: 30px; color: white;
+	margin: 4px; text-shadow: 1px 1px 1px black; border: 1px outset white; border-radius: 0 5px 5px 0;
+}
+.logouto a:hover { background-color: rgba(0,0,0,0.5); }
+
+.footer {
+   background-color: #0099cc; color: black; text-align: center;
+   font-size: 12px; width: 100%; height: 30px; bottom: 0; z-index: 990;
+	box-shadow: inset 0 20px 10px -10px rgba(255,255,255,0.9);
+	-webkit-box-shadow: inset 0 20px 10px -10px rgba(255,255,255,0.9);
+	-moz-box-shadow: inset 0 20px 10px -10px rgba(255,255,255,0.9);
+}
+.footer { position: fixed; }
+.footer p::before { content: "Copyright ";}
+
+/* animation underline left to right word */
+.sliding-u-l-r { display: inline-block; }
+.sliding-u-l-r:after {
+	content: "";
+	display: block;
+	height: 3px;
+	width: 0;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.sliding-u-l-r:hover:after { width: 100%; background: white; }
+
+.topmenu {
+  	height: 30px; width: 100%; font-size: 14px; overflow: auto; 
+	background-color: steelblue; border-bottom: 1px solid lightblue;
+	font-family: sans-serif; position: fixed; left: 0; top: 40px;
+	z-index: 989; font-size: 0.8em; display: block; padding-top: 5px;
+}
+.topmenu span { 
+	height: 25px; margin-left: 10px; padding-left: 5px; padding-right: 5px; 
+	border-bottom: 1px solid blue;
+}
+.topmenu span:hover { border: none; background-color: blue; color: white; }
+
+.topmenu span.tmenu { 
+	height: 25px; margin-left: 10px; padding-left: 5px; padding-right: 5px; 
+	background-color: rgba(255,255,255,0.3); border-bottom: 1px solid grey;
+}
+.topmenu span.tmenu:hover { border: none; background-color: brown; color: white; }
+
+a {cursor:pointer;}
+select:hover { color: black; background-color: cyan; cursor: pointer; }
+
+/* menu utama horizontal */
+a.bas1:link {font-weight: bold;}
+a.bas1:visited {color: white; font-weight: bold;}
+a.bas1:hover {cursor: pointer; color: brown; text-shadow: 0px 1px 1px white; text-decoration:none;}
+a.bas1:active  {color: white; text-shadow: 0px 2px 3px cyan; text-decoration:none;}
+button:hover {background-color: yellow; border: 2px outset blue;}
+
+.bas0 {
+	padding-left: 5px;	  
+	padding-right: 5px;	  
+	color: black;	  
+	text-decoration: none;
+	text-shadow: none;
+	background-color: #D5F06B;
+	border: 2px outset red;
+}
+
+.bas0:hover {
+	padding-left: 5px;	  
+	padding-right: 5px;	  
+	color: black;	  
+	background-color: orange;
+	cursor: pointer; 
+	text-decoration:none;
+	border: 2px outset green;
+}
+
+.bas2 {
+	margin:0 0 10px 0;	  
+	padding: 2px;	  
+	text-decoration: underline;
+	color: blue; 
+	text-shadow: -1px 1px 1px black;
+}
+a.bas2:hover {
+	margin:0 0 10px 0;	  
+	padding: 2px;	  
+	background-color: orange;
+	cursor: pointer; 
+	color: white; 
+	text-shadow: -1px 1px 1px #444; 
+	text-decoration:none;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+.bas3 {
+	text-decoration: none;
+	padding: 2px 20px 0 20px;	  
+	color: white; 
+	text-shadow: none;
+	background:#888;
+	background:rgba(0,0,0,0.2);
+	border-top: solid 1px black;
+	border-right: solid 1px black;
+	border-radius: 10px 10px 0 0;
+	/*behavior: url('../pie/PIE.htc'); */
+}
+a.bas3:hover {
+	text-decoration:none;
+	padding-top: 5px;	  
+	background:#444;
+	background:rgba(0,0,0,0.5);
+	cursor: pointer; 
+	color: white; 
+	text-shadow: -1px 1px 1px red; 
+	border-top: solid 1px lightgrey;
+	border-right: solid 1px lightgrey;
+	font-weight: bold;
+	border-radius: 10px 10px 0 0;
+	behavior: url('../pie/PIE.htc');
+}
+
+a.bas4 {
+	padding: 5px 20px 0 20px;	  
+	background:rgb(200,200,200);
+	background:rgba(255,255,255,0.4);
+	cursor: pointer; 
+	color: red;
+	font-weight: bold;
+	text-shadow: -1px 1px 1px #000; 
+	text-decoration: blink;
+	border-top: solid 1px white;
+	border-right: solid 1px white;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	behavior: url('../pie/PIE.htc');
+}
+
+a.bas5 {
+	padding: 0 20px 0 20px;	  
+	background:#AAAAAA;
+	background:rgba(255,255,255,0.4);
+	cursor: pointer; 
+	color: black;
+	text-shadow: -1px 1px 1px yellow; 
+	font-weight: bold;
+	border: outset 1px grey;
+	border-radius: 10px;
+	behavior: url('../pie/PIE.htc');
+}
+
+a.bas5:hover {
+	padding: 0 20px 0 20px;	  
+	background:#AAAAAA;
+	background:rgba(255,255,255,0.9);
+	cursor: pointer; 
+	color: blue;
+	text-shadow: -1px 1px 1px red; 
+	font-weight: bold;
+	border: outset 1px grey;
+	border-radius: 10px;
+	behavior: url('../pie/PIE.htc');
+}
+
+a.bas6 {
+	padding: 0 20px 0 20px;	  
+	background-color: red;
+	cursor: not-allowed; 
+	color: white;
+	font-weight: bold;
+	text-shadow: -1px 1px 1px #000; 
+	border: outset 1px pink;
+	border-radius: 10px;
+	behavior: url('../pie/PIE.htc');
+}
+
+.bas7 {
+	margin:0 0 10px 0;	  
+	padding: 2px;	  
+	text-decoration: underline;
+	color: black; 
+	text-shadow: -1px 1px 1px orange;
+}
+
+a.bas7:hover {
+	padding: 1px;	  
+	background-color: yellow;
+	cursor: pointer; 
+	color: black; 
+	text-shadow: -1px 1px 1px #444; 
+	text-decoration:none;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+a.bas8 {
+	padding: 0 20px 0 20px;	  
+	background:#AAAAAA;
+	background:rgba(255,0,0,0.5);
+	cursor: pointer; 
+	color: black;
+	text-shadow: -1px 1px 1px yellow; 
+	font-weight: bold;
+	border: outset 1px grey;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+a.bas8:hover {
+	padding: 2px 20px 2px 20px;	  
+	background-color: green;
+	cursor: pointer; 
+	color: white;
+	text-shadow: -1px 1px 1px black; 
+	font-weight: bold;
+	border: outset 2px yellow;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+a.bas9, input.bas9 {
+	padding: 0 5px 0 5px;	  
+	background-color: lightgrey;
+	cursor: pointer; 
+	color: black;
+	text-shadow: -1px 1px 1px yellow; 
+	font-weight: bold;
+	border: outset 1px black;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+a.bas9:hover, input.bas9:hover {
+	padding: 1px 5px 0px 5px;	  
+	background-color: cyan;
+	cursor: pointer; 
+	color: black;
+	text-shadow: -1px 1px 1px grey; 
+	font-weight: bold;
+	border: outset 1px white;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+a.bas10 {
+	padding: 1px 5px 0px 5px;	  
+	background-color: cyan;
+	cursor: pointer; 
+	color: red;
+	text-shadow: -1px 1px 1px grey; 
+	font-weight: bold;
+	border: outset 1px white;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+.bas11 { cursor: pointer; color: black; font-size: 15px; font-weight: bold; text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white; background-image: url('../images/submit.png'); border: blue 3px ridge; border-radius: 5px;}
+.bas11:hover { cursor: pointer; color: orange; font-size: 15px; font-weight: bold; text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black; background-image: url('../images/submit.png'); border: orange 3px ridge; border-radius: 5px; }
+
+.basbgrad1{
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#cef8ff), to(#7fe0f8));
+ background-image: -webkit-linear-gradient(top, #cef8ff, #7fe0f8);
+ background-image: -moz-linear-gradient(top, #cef8ff, #7fe0f8);
+ background-image: -ms-linear-gradient(top, #cef8ff, #7fe0f8);
+ background-image: -o-linear-gradient(top, #cef8ff, #7fe0f8);
+ background-image: linear-gradient(to bottom, #cef8ff, #7fe0f8);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cef8ff, endColorstr=#7fe0f8);
+}
+
+/* menu tombol pilihan edit / ubah / tambah dll */
+a.basm3{
+border:1px solid #96f0ff; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-family:arial, helvetica, sans-serif; padding: 1.5px 5px; text-shadow: -1px -1px 0 rgba(255,255,0,0.7);font-weight:bold; text-align: center; color: green; background-color: #cef8ff;
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#cef8ff), to(#7fe0f8));
+ background-image: -webkit-linear-gradient(top, #cef8ff, #7fe0f8);
+ background-image: -moz-linear-gradient(top, #cef8ff, #7fe0f8);
+ background-image: -ms-linear-gradient(top, #cef8ff, #7fe0f8);
+ background-image: -o-linear-gradient(top, #cef8ff, #7fe0f8);
+ background-image: linear-gradient(to bottom, #cef8ff, #7fe0f8);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cef8ff, endColorstr=#7fe0f8);
+}
+
+a.basm3:hover{
+ cursor: pointer; 
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#9bf1ff), top(#4fd4f5));
+ background-image: -webkit-linear-gradient(top, #9bf1ff, #4fd4f5);
+ background-image: -moz-linear-gradient(top, #9bf1ff, #4fd4f5);
+ background-image: -ms-linear-gradient(top, #9bf1ff, #4fd4f5);
+ background-image: -o-linear-gradient(top, #9bf1ff, #4fd4f5);
+ background-image: linear-gradient(to bottom, #9bf1ff, #4fd4f5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#9bf1ff, endColorstr=#4fd4f5);
+}
+ 
+a.basm4{
+ border:1px solid #96f0ff; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-family:arial, helvetica, sans-serif; padding: 1.5px 5px; text-shadow: -1px -1px 0 rgba(255,255,0,0.7);font-weight:bold; text-align: center; color: black; background-color: gray;
+ background-color: grey;
+}
+
+a.basm4:hover{
+ cursor: pointer; 
+ background-color: lightgrey;
+}
+
+input { color: black; font-size: 14px; text-shadow: 1px 1px 1px #999; background-color: #DDDDD ; background-color: rgba(200,200,200,0.3); border: thick 1px; border-radius: 5px; }
+input.biasa1 { color:lime; font-size: 12px; background-color: black; border: none }
+input.biasa2 { text-decoration: none; color: black; font-size: 14px; background-color: lightgrey; border: inset 1px black }
+input:focus, input[required]:focus { color: black; background-color: rgba(0,255,0,0.2); }
+input:hover, input[required]:hover, select.brselect2:hover { background-color: rgba(0,255,0,0.5); }
+input[type="text"]:disabled{background-color: rgba(255,0,0,0.5);}
+input[type="submit"] { cursor: pointer; color: black; font-size: 15px; font-weight: bold; text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white; background-image: url('../images/submit.png'); border: blue 3px ridge }
+input.btnreg 			{ cursor: pointer; color: black; font-size: 15px; font-weight: bold; text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white; background-image: url('../images/submit.png'); border: blue 3px ridge; border-radius: 5px;}
+input.btnreg:hover 	{ cursor: pointer; color: orange; font-size: 15px; font-weight: bold; text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black; background-image: url('../images/submit.png'); border: orange 3px ridge; border-radius: 5px; }
+input.btnsave 			{ cursor: pointer; color: black; font-size: 15px; font-weight: bold; text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white; 
+							  background-color: orange;	border: white 3px ridge; border-radius: 5px; }
+input.btnsave:hover 	{ cursor: pointer; color: orange; font-size: 15px; font-weight: bold; text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black; 
+							  background-color: yellow; border: orange 3px ridge; border-radius: 5px; }
+input.btnadd     		{ cursor: pointer; color: white; font-size: 13px; font-weight: bold; text-shadow: 0 0 0.2em red, 0 0 0.2em red, 0 0 0.2em red; 
+							  background-color: gray;	border: white 1px solid; border-radius: 4px; }
+input.btnadd:hover 	{ cursor: pointer; color: orange; font-size: 13px; text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black; 
+							  background-color: white; border: orange 1px solid; border-radius: 4px; }
+input.btnedit    		{ cursor: pointer; color: white; font-size: 13px; text-shadow: 0 0 0.2em white, 0 0 0.2em black, 0 0 0.2em black; 
+							  background-color: green;	border: white 1px solid; border-radius: 4px; }
+input.btnedit:hover 	{ cursor: pointer; color: orange; font-size: 13px; text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black; 
+							  background-color: lightgreen; border: orange 1px solid; border-radius: 4px; }
+input.btndel     		{ cursor: pointer; color: black; font-size: 13px; text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white; 
+							  background-color: red; border: white 1px solid; border-radius: 4px; }
+input.btndel:hover 	{ cursor: pointer; color: orange; font-size: 13px; text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black; 
+							  background-color: pink; border: orange 1px solid; border-radius: 4px; }
+input.btnload    		{ cursor: pointer; color: white;  
+							  background-image: url('../images/add.png'); background-repeat: no-repeat; border: none; }
+input.btnload:hover 	{ cursor: pointer; background-color: orange;}
+input.btnunload    		{ cursor: pointer; color: white;  
+							     background-image: url('../images/minus.png'); background-repeat: no-repeat; border: none; }
+input.btnunload:hover 	{ cursor: pointer; background-color: yellow;}
+input[readonly], input[readonly]:hover { background-color: rgba(255,0,0,0.5); font-weight: bold;}
+input[required], textarea[required], select.brselect2[required] { background: purple; background-color: rgba(128,0,128,0.3); }
+select.brselect1 {cursor: pointer; color: black; font-size: 14px; width: 500px; background-color: rgba(255,255,0,0.5);}
+select.brselect2 {cursor: pointer; color: black; font-size: 14px; background-color: rgba(255,255,0,0.5);}
+select.brselect3 {cursor: pointer; color: black; font-size: 14px; background-color: rgba(0,0,255,0.2);}
+option:disabled { background-color: rgba(0,0,0,0.5); color: white; cursor: default; }
+
+div.shadow {
+	font-size: 24px;
+	font-weight: bold;
+	color: cyan; 
+	text-shadow: 0 0 0.1em #555, 0 0 0.1em #555, 0 0 0.1em #555; 
+	text-align: center;
+	margin:5px auto;
+  	width: 988px;
+	height:100px;
+	background-image: url('../images/top1.jpg');
+  	-moz-box-shadow: 0px 3px 5px black;
+  	-webkit-box-shadow: 0px 3px 5px black;  
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+div.lshadow {
+	font-size: 24px;
+	font-weight: bold;
+	color: navy; 
+	text-shadow: 0 0 0.1em white, 0 0 0.1em white, 0 0 0.1em white; 
+	text-align: center;
+	margin:5px auto;
+  	width: 988px;
+	height:100px;
+	background-color: lightblue; 
+  	-moz-box-shadow: 0px 3px 5px black;
+  	-webkit-box-shadow: 0px 3px 5px black;  
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+div.container {
+	margin:10px auto 0 auto;
+	padding: 5px;
+  	width: 980px;
+  	height: auto;
+	background:#888;
+	background:rgba(0,0,0,0.4);
+  	box-shadow:0 1px 3px rgba(0,0,0,0.6);
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+	color: orange; font-size: 14px; text-shadow: -2px 1px 1px black;
+}
+
+div.brform {
+	margin:5px auto 0 auto;
+	padding: 5px;
+  	width: 98%;
+	height: auto;
+	background:#AAAAAA;
+	background:rgba(255,255,255,0.4);
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+	color: black; font-size: 14px; text-shadow: -1px 1px 1px white;
+}
+
+div.brformtop0 {
+	margin:0px auto 0 auto;
+	padding: 5px;
+  	width: 98%;
+	height: auto;
+	background:#AAAAAA;
+	background:rgba(255,255,255,0.4);
+	behavior: url('../pie/PIE.htc');
+	border-radius: 5px;
+	color: black; font-size: 14px; text-shadow: -1px 1px 1px white;
+}
+
+div.container2 {
+	margin:10px auto 0 auto;
+	padding: 5px;
+  	width: 1100px;
+  	height: 540px;
+  	background-image:-webkit-linear-gradient(top,#ebebeb,#D7D7D7);
+	background:#888;
+	background:rgba(0,0,0,0.4);
+  	box-shadow:0 1px 3px rgba(0,0,0,0.6);
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+	color: orange; font-size: 15px; text-shadow: -2px 1px 1px black;
+}
+
+div.brform2 {
+	margin:5px auto 0 auto;
+	padding: 5px;
+  	width: 98%;
+	height: 500px;
+	background:#AAAAAA;
+	background:rgba(255,255,255,0.4);
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+	color: black; font-size: 15px; text-shadow: -1px 1px 1px white;
+}
+
+div.container3 {
+	margin:10px auto 0 auto;
+	padding: 5px;
+  	width: 1100px;
+  	height: auto;
+  	background-image:-webkit-linear-gradient(top,#ebebeb,#D7D7D7);
+	background:#888;
+	background:rgba(0,0,0,0.4);
+  	box-shadow:0 1px 3px rgba(0,0,0,0.6);
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+	color: orange; font-size: 15px; text-shadow: -2px 1px 1px black;
+}
+
+div.brform3 {
+	margin: 5px auto 0 auto;
+	padding: 5px;
+  	width: 98%;
+	height: auto;
+	background:#AAAAAA;
+	background:rgba(255,255,255,0.4);
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+	color: black; font-size: 15px; text-shadow: -1px 1px 1px white;
+}
+
+div.brform3top0 {
+	margin: 0 auto 0 auto;
+	padding: 5px;
+  	width: 98%;
+	height: auto;
+	background:#AAAAAA;
+	background:rgba(255,255,255,0.4);
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+	color: black; font-size: 15px; text-shadow: -1px 1px 1px white;
+}
+
+div.container4 {
+	margin:0 auto 0 auto; padding: 5px; width: 99%; height: auto;
+	color: orange; font-size: 14px; text-shadow: -2px 1px 1px black;
+  	-moz-box-shadow: 0px 3px 5px black;
+  	-webkit-box-shadow: 0px 3px 5px black;  
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+	background: lightgrey;
+   background: transparent\9;
+   background:rgba(0,0,0,0.3);
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66888888,endColorstr=#66888888);
+   zoom: 1;
+   -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px inset grey;
+	behavior: url('../pie/PIE.htc');
+}
+
+div.container4:nth-child(n) {
+    filter: none;
+}
+
+div.brform4 {
+	margin: 5px auto 0 auto;
+	padding: 5px;
+  	width: 99%;
+	height: auto;
+	color: black; font-size: 15px; text-shadow: -1px 1px 1px white;
+	background:rgb(200,200,200);
+	background:rgba(255,255,255,0.4);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+div.brform4top0 {
+	text-shadow: none; margin: 0 auto 0 auto; padding: 5px;
+  	width: 100%; height: auto; color: black; font-size: 1em;
+  	background: white;
+	background-color:rgb(200,200,200);
+	background-color:rgba(255,255,255,0.8);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+div.bgtabel1 {
+	margin:5px;
+  	width: 98%;
+	height: auto;
+	background:#FFFFFF;
+	background:rgba(255,255,255,0.7);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+	color: black; font-size: 15px;
+}
+
+div.bdiv1 {
+	margin:5px auto 0 auto;
+	padding: 5px;
+  	width: 300px;
+	height: auto;
+	float: left;
+}
+
+div.bdiv2 {
+	margin:5px auto 0 auto;
+	padding: 5px;
+  	width: 300px;
+	height: auto;
+	background:#AAAAAA;
+	background:rgba(255,255,255,0.4);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+	color: black; font-size: 15px; text-shadow: -1px 1px 1px white;
+	float: left;
+}
+
+div.bview1 {
+	top: 0;
+	bottom: 0;
+	left: 25%;
+	width: 30%;
+	position: fixed !important;
+	background-color: navy;
+	border: solid 3px navy;
+}
+
+div.bview2 {
+/*		  
+	top: 10%;
+	left: 15%;
+	width: 40%;
+	height: 80%;
+	position: fixed !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#cef8ff), to(#7fe0f8));
+ 	background-image: -webkit-linear-gradient(top, #cef8ff, #7fe0f8);
+ 	background-image: -moz-linear-gradient(top, #cef8ff, #7fe0f8);
+ 	background-image: -ms-linear-gradient(top, #cef8ff, #7fe0f8);
+ 	background-image: -o-linear-gradient(top, #cef8ff, #7fe0f8);
+ 	background-image: linear-gradient(to bottom, #cef8ff, #7fe0f8);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cef8ff, endColorstr=#7fe0f8);
+	border-radius: 5px;
+ 	-moz-box-shadow: 3px 3px 9px white;
+	-webkit-box-shadow: 3px 3px 9px white;
+	box-shadow: 3px 3px 9px white;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#FFFFFF')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#FFFFFF');
+*/
+	top: 10%;
+	width: 800px;
+	height: 85%;
+	position: fixed !important;
+	background-color: lightblue;
+	border: 3px solid yellow;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+div.bview3 {
+	top: 15%;
+	bottom: 1%;
+	left: 13%;
+	width: 75%;
+	position: fixed !important;
+	background-color: lightblue;
+	border: solid 3px blue;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+div.bview4 {
+	text-align: center;	  
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 30%;
+	position: fixed !important;
+	background-color: navy;
+	border: solid 3px navy;
+}
+
+div.bview5 {
+	top: 0;
+	bottom: 0;
+	left: 30%;
+	width: 70%;
+	position: fixed !important;
+	background-color: navy;
+	border: solid 3px navy;
+}
+
+div.bviewspp {
+	top: 250px;
+	left: 60px;
+	width: 510px;
+	height: 50%;
+	position: fixed !important;
+	background-color: white;
+	border: solid 3px navy;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+div.bdim1 {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	position: fixed !important;
+   background:rgb(0,0,0);
+   background: transparent\9;
+   background:rgba(0,0,0,0.6);
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+   zoom: 1;
+}
+
+div.info1 {
+	margin: 5px auto; left: 0; right: 0;
+	text-align: center; text-shadow: none; padding: 5px;
+  	color: black; font-size: 1em; font-style: italic;
+	background-color: lime; border: 1px solid grey;
+}
+
+.brtb1 {
+	padding: 2px;	  
+	border: solid 1px white;
+	background: #7BC4EF;
+ 	background-color: rgba(0,0,255,0.3);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+.brth1 {
+	color: white; text-shadow: 1px 1px 1px black;
+	background-color: #7BC4EF;
+	background-color: rgba(0,0,128,0.3);
+}
+
+.brth2 {
+	color: white; text-shadow: 1px 1px 1px black;
+	background-color: #000000;
+	background-color: rgba(0,0,0,0);
+}
+
+.brth3 {
+	color: white; text-shadow: none;
+	background-color: navy;
+}
+
+.brtd1 {
+	color: black; text-shadow: 1px 1px 1px white;
+	background-color: #7BC4EF;
+	background-color: rgba(255,255,255,0.3);
+}
+
+.brtd3 {
+	color: black; font-family: 'Times New Roman'; text-shadow: none;
+	background-color: white;
+	background-color: rgba(255,255,255,0.7);
+}
+
+.brtd4 {
+	color: black; font-family: 'Times New Roman'; text-shadow: none;
+	background-color: white;
+}
+
+.brtbmenu {
+	margin: 5px auto 0 auto;
+	border-top: solid 1px black;
+	border-bottom: solid 1px gray;
+	padding-bottom: 0;
+	background:#888;
+	background:rgba(0,0,0,0.2);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 15px 15px 0 0;
+	behavior: url('../pie/PIE.htc');
+}
+
+.brtdmenu {
+	width: 50px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	text-align: center;
+	border-top: solid 1px white;
+	background:#AAAAAA;
+	background:rgba(255,255,255,0.4);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 15px 15px 0 0;
+	behavior: url('../pie/PIE.htc');
+}
+
+.brtbtag1 {
+	width: 100%;	  
+	padding: 1px;	  
+	border: outset 2px black; 
+	background: #888;
+ 	background-color: rgba(0,0,0,0.3);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 3px;
+	behavior: url('../pie/PIE.htc');
+}
+
+.brtbtag2 {
+	width: 100%;	  
+	padding: 1px;	  
+	border: groove 2px white; 
+	background: #888;
+ 	background-color: rgba(255,255,255,0.5);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url('../pie/PIE.htc');
+}
+
+.brtbform1 {
+	padding: 1px;	  
+	background:#AAAAAA;
+	background:rgba(255,255,255,0.5);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 3px;
+	behavior: url('../pie/PIE.htc');
+}
+
+
+.baswb15 {
+	color: white; font-size: 15px; text-shadow: 1px 1px 1px black;
+}
+
+.baswb18 {
+	color: white; font-size: 18px; text-shadow: 1px 1px 1px black;
+}
+
+.bf01 {
+	color: yellow; font-size: 18px; text-shadow: 1px 1px 1px black;
+	padding: 0 5px 0 5px;
+}
+
+.bf02 {
+	color: yellow; font-size: 15px; text-shadow: 1px 1px 1px black;
+	padding: 0 5px 0 5px;
+}
+
+.bf03 {
+	color: cyan; font-size: 18px; text-shadow: 1px 1px 1px black;
+	padding: 0 5px 0 5px;
+}
+
+.bf04 {
+	color: red; font-size: 16px; text-shadow: 1px 1px 1px black;
+	padding: 0 5px 0 5px;
+}
+
+.bfredblack14 {
+	color: red; font-size: 14px; text-shadow: 1px 1px 1px black;
+	padding: 0 5px 0 5px;
+}
+
+.bf05 {
+	color: green; font-size: 16px; text-shadow: 1px 1px 1px yellow;
+	padding: 0 5px 0 5px;
+}
+
+.bf06 {
+	color: green; font-size: 16px; text-shadow: 1px 1px 1px black;
+	padding: 0 5px 0 5px;
+}
+
+.bf07 {
+	color: red; font-size: 14px; text-shadow: none;
+}
+
+.bfredblink14 {
+	color: red; font-size: 14px; text-shadow: none; text-decoration: blink;
+}
+
+.bfredblink16 {
+	color: red; font-size: 16px; text-shadow: none; text-decoration: blink;
+}
+
+.bfredblink12 {
+	color: red; font-size: 12px; text-shadow: none; text-decoration: blink;
+}
+.bfbluewhite16 {
+	color: blue; font-size: 16px; text-shadow: 1px 1px 1px white;
+}
+.bfblueblink12 {
+	color: blue; font-size: 12px; text-shadow: none; text-decoration: blink;
+}
+
+.bfblueblink14 {
+	color: blue; font-size: 14px; text-shadow: none; text-decoration: blink;
+}
+
+
+.bfwhiteblack14 {
+	color: white; font-size: 14px; text-shadow: 1px 1px 1px black;
+}
+
+.bfcyanblack14 {
+	color: cyan; font-size: 14px; text-shadow: 1px 1px 1px black;
+}
+.bfcyanblink12 {
+	color: cyan; font-size: 12px; text-shadow: none; text-decoration: blink;
+}
+
+span.link1 { 
+	height: 25px; margin-left: 10px; padding-left: 5px; padding-right: 5px; 
+	border-bottom: 1px solid blue; background-color: rgba(255,255,255,0.5);
+}
+span.link1:hover { border: none; background-color: blue; color: white; }
