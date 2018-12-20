@@ -6,7 +6,6 @@ function omenu_m(id,xarg1) {
          x.style.visibility = 'visible';
          x.style.opacity = '1.0';
          document.getElementById('xtrigram').src = 'https://raw.githubusercontent.com/ianicakomputek/pos/master/close.png';
-         document.getElementById('xslide').style.display = 'none';
          document.getElementById('xrow').style.display = 'none';
          document.getElementById('xfooter').style.display = 'none';
       }
@@ -15,7 +14,6 @@ function omenu_m(id,xarg1) {
          x.style.visibility = 'hidden';
          x.style.opacity = '0.0';
          document.getElementById('xtrigram').src = 'https://raw.githubusercontent.com/ianicakomputek/pos/master/trigram.png';
-         document.getElementById('xslide').style.display = 'block';
          document.getElementById('xrow').style.display = 'block';
          document.getElementById('xfooter').style.display = 'block';
          parent.location.href = '#ngetop';
@@ -27,7 +25,6 @@ function omenu_m(id,xarg1) {
          x.style.visibility = 'hidden';
          x.style.opacity = '0.0';
          document.getElementById('xtrigram').src = 'https://raw.githubusercontent.com/ianicakomputek/pos/master/trigram.png';
-         document.getElementById('xslide').style.display = 'block';
          document.getElementById('xrow').style.display = 'block';
          document.getElementById('xfooter').style.display = 'block';
    }
