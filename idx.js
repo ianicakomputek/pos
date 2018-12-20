@@ -30,20 +30,5 @@ function omenu_m(id,xarg1) {
          document.getElementById('xslide').style.display = 'block';
          document.getElementById('xrow').style.display = 'block';
          document.getElementById('xfooter').style.display = 'block';
-      }
+   }
 }
-
-    function labnolThumb(id) {
-        var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',    <!--gak bisa dirubah nih ! -->
-            play = '<div class="play"></div>';
-        return thumb.replace("ID", id) + play;
-    }
-
-    function labnolIframe() {
-        var iframe = document.createElement("iframe");
-        var embed = "https://www.youtube.com/embed/ID?autoplay=1";
-        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
-        iframe.setAttribute("frameborder", "0");
-        iframe.setAttribute("allowfullscreen", "1");
-        this.parentNode.replaceChild(iframe, this);
-    }
