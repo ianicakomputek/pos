@@ -16,7 +16,7 @@
    border-radius: 2px;
 }
 div#omenu_m a {
-   display: block; background-color: rgba(255,0,0,0.5); margin: 2px; height: 40px; line-height: 40px;
+   display: block; background-color: rgba(0,255,0,0.5); margin: 2px; height: 40px; line-height: 40px; color: yellow;
    -moz-border-radius: 2px;
    -webkit-border-radius: 2px;
    border-radius: 2px;
@@ -128,59 +128,4 @@ a:hover { color: white; }
    .footer { position: fixed; }
    .footer span:before { content: "Copyright ";}
 }
-
-    .youtube-player {
-        position: relative;
-        padding-bottom: 65%; /*56.23%;*/
-        /* Use 75% for 4:3 videos */
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        background: #000;
-        margin: 2px;
-    }
-    
-    .youtube-player iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 100;
-        background: transparent;
-    }
-    
-    .youtube-player img {
-        bottom: 0;
-        display: block;
-        left: 0;
-        margin: auto;
-        max-width: 100%;
-        width: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        border: none;
-        height: auto;
-        cursor: pointer;
-        -webkit-transition: .4s all;
-        -moz-transition: .4s all;
-        transition: .4s all;
-    }
-    
-    .youtube-player img:hover {
-        -webkit-filter: brightness(75%);
-    }
-    
-    .youtube-player .play {
-        height: 72px;
-        width: 72px;
-        left: 50%;
-        top: 50%;
-        margin-left: -36px;
-        margin-top: -36px;
-        position: absolute;
-        background: url("/apl/gambar/play.png") no-repeat;
-        cursor: pointer;
-    }
 
