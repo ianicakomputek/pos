@@ -16,7 +16,7 @@
    border-radius: 2px;
 }
 div#omenu_m a {
-   display: block; background-color: rgba(0,255,0,0.5); margin: 2px; height: 40px; line-height: 40px; color: yellow;
+   display: block; background-color: rgba(0,0,255,0.5); margin: 2px; height: 40px; line-height: 40px; color: yellow;
    -moz-border-radius: 2px;
    -webkit-border-radius: 2px;
    border-radius: 2px;
