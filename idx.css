@@ -106,7 +106,7 @@ a:hover { color: white; }
    .namepc { display: inline-block; }
    .menu { display: block; margin: 0 auto; text-align: center; position: fixed; width: 100%; z-index: 989; color: white; font-size: 16px; text-shadow: 2px 2px 2px green; }
    .unitlinka { width: 10%; padding-bottom: 30px; }
-   .col-11 { width: 100%; height: 100px; }
+   .col-11 { width: 100%; height: 80px; }
    .col-12 { width: 100%; text-align: center; padding: 15px; }
    .xpost, .xpostvid, .xpostpic { border: 3px solid grey; border-radius: 10px; background-color: #333333; background-color: rgba(0,0,255,0.3); padding: 0 6px 0 6px; }
    .xpostvid { padding-bottom: 33%; }
