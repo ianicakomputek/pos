@@ -68,7 +68,6 @@ a:hover { color: white; }
    .col-m-12 { width: 100%; text-align: center; padding: 0 2px 0 2px; }
    .xpost, .xpostvid, .xpostpic { color: black; background-color: #333333; background-color: rgba(0,255,0,0.8); padding: 5px 1px 5px 1px; border-radius: 5px; }
    .mypic { width: 100%; margin: 0 auto; text-align: center; height: 300px; }
-   .tomlb, .tomrb { font-size: 2em;}
    .mySlides { width:100%; }
    .myimg { width:100%; }
 }
