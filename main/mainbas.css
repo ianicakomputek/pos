@@ -24,15 +24,12 @@ body {
 
 * { box-sizing: border-box; }
 
-.space1 { height: 100vh; }
+.c_space1 { height: 100vh; }
 
-.c_pri_container { display: none; background-color: grey; }
-
-.c_pri_container::after, .c_pub_container::after { 
+.c_container::after { 
 	content: ""; clear: both; display: table; 
 }
-.c_pub_container { background-color: lightgreen; }
-.c_pri_container, .c_pub_container {
+.c_container{
 	position: relative;
 	width: 100%; font-size: 1em; color: black;
 	height: auto !important;
@@ -41,6 +38,9 @@ body {
 	min-height: -moz-calc(100vh - 80px);
 	min-height: calc(100vh - 80px);
 }
+
+.c_pub_container { background-color: lightgreen; }
+.c_pri_container { display: none; background-color: grey; }
 
 a { text-decoration: none; display: block; color: black; }
 a.normal { text-decoration: none; color: black; }
