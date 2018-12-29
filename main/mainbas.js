@@ -1,8 +1,8 @@
 function brcekcors(method, url) {
   var xhr = new XMLHttpRequest();
-  if (&quot;withCredentials&quot; in xhr) {
+  if ('withCredentials' in xhr) {
     xhr.open(method, url, true);
-  } else if (typeof XDomainRequest != &quot;undefined&quot;) {
+  } else if (typeof XDomainRequest != 'undefined') {
     xhr = new XDomainRequest();
     xhr.open(method, url);
   } else {
@@ -12,7 +12,7 @@ function brcekcors(method, url) {
 }
 
 function brformlogin(c_client) {
-  var xurl = 'https://' + c_client + '.ianica.xyz/cgi-bin/fmlogin.cgi';
+  var xurl = 'https://' + c_client.toString() + '.ianica.xyz/cgi-bin/fmlogin.cgi';
   var xhr = brcekcors('GET', xurl);
   if (!xhr) {
     alert('Tidak mendukung CORS !');
