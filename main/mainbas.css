@@ -24,11 +24,13 @@ body {
 
 * { box-sizing: border-box; }
 
-.c_container::after { 
+.c_pri_container { display: none; }
+
+.c_pri_container::after, .c_pub_container::after { 
 	content: ""; clear: both; display: table; 
 }
 
-.c_container {
+.c_pri_container, .c_pub_container {
 	position: relative;
 	width: 100%; font-size: 1em; color: black;
 	height: auto !important;
