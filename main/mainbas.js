@@ -11,6 +11,28 @@ function brcekcors(method, url) {
   return xhr;
 }
 
+function brformlogin(c_client) {
+  var xurl = &#39;https://&#39; + c_client + &#39;.ianica.xyz/cgi-bin/fmlogin.cgi&#39;;
+  var xhr = brcekcors(&#39;GET&#39;, xurl);
+  if (!xhr) {
+    alert(&#39;Tidak mendukung CORS !&#39;);
+    return;
+  }
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4) {
+      if (this.status == 200) {
+      	document.getElementById('i_pub_container').style.display='none';
+      	document.getElementById('i_pri_container').style.display='block';
+      	document.getElementById('i_pri_container').innerHTML=this.responseText;
+      }
+    }  
+  };
+  xhr.onerror = function() {
+    alert(&#39;Server busy, please try again later.&#39;);
+  };
+  xhr.send();
+}
+
 function brpreload() {
 	var xhr = new XMLHttpRequest();
 	var url = "https://XXX.ianica.xyz/cgi-bin/brin.cgi";  ==> GANTI XXX DENGA CLIENT
