@@ -12,10 +12,10 @@ function brcekcors(method, url) {
 }
 
 function brformlogin(c_client) {
-  var xurl = &#39;https://&#39; + c_client + &#39;.ianica.xyz/cgi-bin/fmlogin.cgi&#39;;
-  var xhr = brcekcors(&#39;GET&#39;, xurl);
+  var xurl = 'https://' + c_client + '.ianica.xyz/cgi-bin/fmlogin.cgi';
+  var xhr = brcekcors('GET', xurl);
   if (!xhr) {
-    alert(&#39;Tidak mendukung CORS !&#39;);
+    alert('Tidak mendukung CORS !');
     return;
   }
   xhr.onreadystatechange = function() {
@@ -29,7 +29,7 @@ function brformlogin(c_client) {
     }  
   };
   xhr.onerror = function() {
-    alert(&#39;Server busy, please try again later.&#39;);
+    alert('Server busy, please try again later.');
   };
   xhr.send();
 }
