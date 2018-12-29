@@ -24,6 +24,7 @@ function brformlogin(c_client) {
       	document.getElementById('i_pub_container').style.display='none';
       	document.getElementById('i_pri_container').style.display='block';
       	document.getElementById('i_pri_container').innerHTML=this.responseText;
+      	alert('Ok');
       }
     }  
   };
