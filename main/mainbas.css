@@ -1,0 +1,470 @@
+html body { height: 100%; }
+
+body { 
+	line-height: 1; margin: 0; padding: 0; background-color: #ffffff; 
+}
+
+.c_header {
+	font-family: "Lucida Sans", sans-serif; font-size: 0.8em;
+	margin: 0; padding: 0; text-align: center;
+	background-color: green; color: #ffffff; font-weight: bold;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.8);
+	-webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0 3px 5px rgba(0,0,0,0.8);
+	position: fixed; width: 100%; height: 40px; z-index: 990;
+}
+
+.c_footer {
+	background-color: #0099cc; color: black; text-align: center;
+	font-size: 12px; width: 100%; height: 30px; bottom: 0; z-index: 990;
+	box-shadow: inset 0 20px 10px -10px rgba(255,255,255,0.9);
+	-webkit-box-shadow: inset 0 20px 10px -10px rgba(255,255,255,0.9);
+	-moz-box-shadow: inset 0 20px 10px -10px rgba(255,255,255,0.9);
+}
+
+* { box-sizing: border-box; }
+
+.c_container::after { 
+	content: ""; clear: both; display: table; 
+}
+
+.c_container {
+	position: relative;
+	width: 100%; font-size: 1em; color: black;
+	height: auto !important;
+	min-height: 70%;
+	min-height: -webkit-calc(100vh - 80px);
+	min-height: -moz-calc(100vh - 80px);
+	min-height: calc(100vh - 80px);
+}
+
+a { text-decoration: none; display: block; color: black; }
+a.normal { text-decoration: none; color: black; }
+a:hover { cursor: pointer; color: white; }
+a.bas7:hover {
+	background-color: yellow;
+	cursor: pointer;
+	color: black;
+	text-shadow: -1px 1px 1px #444;
+	text-decoration:none;
+	border-radius: 5px;
+	behavior: url("https://ianicakomputek.github.io/pos/pie/PIE.htc");
+}
+
+input { cursor: pointer; }
+input.btnedit { 
+	cursor: pointer; color: white; text-shadow: 0 0 0.2em white, 0 0 0.2em black, 0 0 0.2em black;
+	background-color: grey;	border: white 1px solid; border-radius: 4px; 
+}
+input.btnedit:hover { 
+	cursor: pointer; color: orange; text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black;
+	background-color: lightgreen; border: orange 1px solid; border-radius: 4px; 
+}
+input.btndel { 
+	cursor: pointer; color: black; text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white;
+	background-color: red; border: white 1px solid; border-radius: 4px; 
+}
+input.btndel:hover { 
+	cursor: pointer; color: orange; text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black;
+	background-color: pink; border: orange 1px solid; border-radius: 4px; 
+}
+input.btnreg { 
+	cursor: pointer; color: black; font-weight: bold; text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white; 
+	background-image: url("https://raw.githubusercontent.com/ianicakomputek/pos/master/submit.png"); border: blue 3px ridge; border-radius: 5px;
+}
+input.btnreg:hover { 
+	cursor: pointer; color: orange; font-weight: bold; text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black; 
+	background-image: url("https://raw.githubusercontent.com/ianicakomputek/pos/master/submit.png"); border: orange 3px ridge; border-radius: 5px; 
+}
+
+div.bmargin0 { margin: 0 auto; }
+div.bmargin5 { margin: 5px auto 0 auto; }
+div.bmargin10 { margin: 10px auto 0 auto; }
+div.bmargin35 { margin: 35px auto 0 auto; }
+div.cltengah { left: 0; right: 0; }
+
+.bfbold { font-weight: bold; }
+.bfred { color: red; }
+.bfgreen { color: green; }
+.bfblue { color: blue; }
+.bfwhite { color: white; }
+.bfblack { color: black; }
+.bf12 { font-size: 12px; }
+.bf14 { font-size: 14px; }
+.bf05em { font-size: 0.5em; }
+.bf08em { font-size: 0.8em; }
+.bf1em { font-size: 1em; }
+.bf12em { font-size: 1.2em; }
+.bf13em { font-size: 1.3em; }
+.bf15em { font-size: 1.5em; }
+.bf2em { font-size: 2em; }
+
+span.blink { animation: blink 1s linear infinite; }
+@keyframes blink{
+	0%{opacity: 0;}
+	50%{opacity: .5;}
+	100%{opacity: 1;}
+}
+
+div.tblmn { display: inline-block; min-width: 50%; text-align: left; }
+div.tblrw { clear: both; }
+div.tblcl { float: left; width: 100%; }
+div.tbldt { float: left; color: black; padding: 1px; }
+div.tbldtr { float: left; color: black; padding: 1px; text-align: right; }
+div.tbldt_radio {
+	float: left; text-align: center; color: black;
+	border: 1px inset green;
+  	-webkit-appearance: none; -moz-appearance: none;
+	background-color: rgba(0,255,0,0.5);
+}
+
+div#blackhawk {
+	position: fixed;
+	width: 100%;
+	height: auto !important;
+	min-height: 100%;
+	min-height: 100vh;
+	margin: 0 auto; top: 0; left: 0; right: 0; botton: 0
+  	-webkit-appearance: none; -moz-appearance: none;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 994;
+}
+
+.footinfo, .footinfo2 { 
+	position: fixed; width: 100px; height: 100px; border-radius: 50px;
+   border: solid 2px white; bottom: 80px; z-index: 991;
+   background-image: url("https://raw.githubusercontent.com/ianicakomputek/pos/master/info_l.gif");
+   background-size: 100% 100%; background-position: center center; width: 100px; 
+}
+.footinfo:hover, .footinfo2:hover { cursor: pointer; }
+.footinfo  { left: 30px; background-color: rgba(200,200,0,0.5); }
+.footinfo2 { left: 150px; background-color: rgba(0,0,200,0.5); }
+.spfooti { color: yellow; }
+.spfooti2 { color: cyan; }
+.spfooti, .spfooti2 { 
+	display: block; text-align: center; text-shadow: 1px 1px 1px black;
+   padding-left: 5px; padding-right: 5px; font-size: 0.8em; 
+}
+.ksinfo, .yyinfo { width: 100% }
+.lisinfo { display: block; padding: 5px; }
+.lisinfo table { text-align: center; border-collapse: collapse; }
+.lisinfo table td { border: solid 1px white; }
+.lisinfoisi { display: block; overflow: hidden; padding: 5px 5px 0 5px; }
+.lisinfoisi span { 
+	display: block; border-left: solid 1px white; border-right: solid 1px white;
+   border-top: solid 1px white; padding: 5px;
+   font-size: 1.5em;
+}
+.infottd { display: block; overflow: hidden; padding: 0 5px 5px 5px; }
+.infottd span { 
+	display: block; border-left: solid 1px white;
+   border-right: solid 1px white; border-bottom: solid 1px white; padding: 5px;
+}
+.ksinfo, .yyinfo { width: 50% }
+.ksinfo .spnote, .yyinfo .spnote { display: inline-block; padding-right: 10px ; }
+
+span.link1:hover { border: none; background-color: blue; color: white; }
+
+@media only screen and (max-width: 767px) {
+	.logout, .topmenu, .septopmenu { display: none; }
+	input[type=text], input[type=url], input[type=email], input[type=password],
+	input[type=tel], input[type=file]  {
+		 -webkit-appearance: none; -moz-appearance: none;
+		display: block; margin: 0; color: black;
+		width: 98%; height: 40px;
+		line-height: 40px; font-size: 17px;
+		border: 1px inset green; border-radius: 5px;
+		background-color: rgba(0,255,0,0.5);
+	}
+	input[type=radio] {
+		 -webkit-appearance: none; -moz-appearance: none;
+ 		width: 22px; height: 22px;
+  		border: 1px inset white; border-radius: 50%;
+		background-color: grey;
+	}
+	input[type=checkbox] { width: 22px; height: 22px; }
+
+	input:checked { background-color: yellow; border: 1px inset black;}
+	input[type=submit] {
+		 -webkit-appearance: none; -moz-appearance: none;
+		color: white; font-weight: bold;
+		height: 40px; padding: 0 20px 0 20px;
+		border: 1px outset green; background-color: black;
+		box-shadow: inset 0 10px 5px -5px rgba(255,255,255,0.8);
+		 -webkit-box-shadow: inset 0 10px 5px -5px rgba(255,255,255,0.8);
+		 -moz-box-shadow: inset 0 10px 5px -5px rgba(255,255,255,0.8);
+	}
+
+	input[required], select.brselect2[required] { background: purple; background-color: hotpink; }
+	input.btnedit, input.btnreg, input.btndel {
+		height: 40px; line-height: 40px; -webkit-appearance: none; -moz-appearance: none;
+		font-size: 17px; 
+	}
+	textarea { -moz-appearance: none ; -webkit-appearance: none; width: 99%; min-height: 150px; }
+
+	select.brselect2 {
+		 -webkit-appearance: none;
+		 -moz-appearance: none;
+		color: black;
+		width: 98%;
+		height: 40px;
+		background: rgba(0,255,0,0.3);
+		border: 1px outset white; border-radius: 5px;
+		padding: 2px;
+		line-height: 30px; font-size: 17px;
+	}
+
+	table { margin: auto; }
+
+	.menu_m {
+		text-align: center; height: 40px; width: 40px;
+		position: fixed; left: 0; top: 0;  //right: 0; top: 0;
+		z-index: 991;
+	}
+	.menu_m span {
+ 		line-height: 40px; color: darkslategrey; font-size: 1.5em; text-shadow: 0 1px 1px white;
+ 	}
+
+	#omenu_m {
+   	visibility: visible; opacity: 1; left: 0 ; ' //right: 0;
+   	position: fixed; min-width: 70%; height: auto; top: 41px; '
+   	background-color: white; padding: 2px; z-index: 992; font-size: 1.5em;
+   	border: 1px outset grey; '
+   	 -moz-border-radius: 2px;
+   	 -webkit-border-radius: 2px;
+   	border-radius: 2px;
+	}
+	div#omenu_m a {
+   	display: block; background-color: rgba(255,0,0,0.5); margin: 2px; height: 40px; line-height: 40px'
+   	 -moz-border-radius: 2px;
+   	 -webkit-border-radius: 2px;
+   	border-radius: 2px;
+	}
+	#omenu_m span.spom { line-height: 40px; }
+
+	div.container {
+		width: 100%; color: orange; font-size: 1em;
+		height: auto !important; //* real browsers */
+	}
+
+	div.brform {
+		text-shadow: none;
+		width: 100%; height: auto; color: black; font-size: 1em;
+		background: white;
+		background-color:rgb(200,200,200);
+		background-color:rgba(255,255,255,0.5);
+	}
+
+	div.tbldtr { text-align: left; }
+
+	span.link1 { 
+		line-height: 40px; display: inline-block;
+		margin-left: 10px; padding-left: 5px; padding-right: 5px;
+		border-bottom: 1px solid blue; background-color: rgba(255,255,255,0.5);
+	}
+	span.link1 a { line-height: 40px; }
+
+} // END HP
+
+// ##################################LAYAR KOMPUTER PC LAPTOP ####################################
+@media only screen and (min-width: 768px) {
+	html { max-width: 2000px; font-family: Serif; } 	//font-family: "Lucida Sans", sans-serif; }
+	input { 
+		color: black; font-size: 14px; text-shadow: 1px 1px 1px #999; background-color: #DDDDD ; background-color: rgba(200,200,200,0.3); border: thick 1px; border-radius: 5px; 
+	}
+	input.biasa1 { color:lime; font-size: 12px; background-color: black; border: none }
+	input.biasa2 { text-decoration: none; color: black; font-size: 14px; background-color: lightgrey; border: inset 1px black }
+	input:focus, input[required]:focus { color: black; background-color: white; }
+	input:hover, input[required]:hover, select.brselect1:hover, select.brselect2:hover {
+		background-color: rgba(255,255,0,0.5); 
+	}
+	input[required], select.brselect2[required] { background: hotpink; }
+	input[type="submit"] { 
+		cursor: pointer; color: black; font-weight: bold; text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white; 
+		background-image: url("https://raw.githubusercontent.com/ianicakomputek/pos/master/submit.png"); border: blue 3px ridge 
+	}
+	input.btnsave { 
+		cursor: pointer; color: black; font-weight: bold; text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white;
+		background-color: orange;	border: white 3px ridge; border-radius: 5px; 
+	}
+	input.btnsave:hover { 
+		cursor: pointer; color: orange; font-weight: bold; text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black;
+		background-color: yellow; border: orange 3px ridge; border-radius: 5px; 
+	}
+	input.btnadd { 
+		cursor: pointer; color: white; font-weight: bold; text-shadow: 0 0 0.2em red, 0 0 0.2em red, 0 0 0.2em red;
+		background-color: gray;	border: white 1px solid; border-radius: 4px; 
+	}
+	input.btnadd:hover { 
+		cursor: pointer; color: orange; text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black;
+		background-color: white; border: orange 1px solid; border-radius: 4px; 
+	}
+	input[type=text]:disabled{background-color: grey;}
+	input[readonly] { background-color: grey; }
+
+	select.brselect1[required] { background: white; background-color: rgba(255,255,255,0.5); }
+	select.brselect1 {cursor: pointer; color: black; background-color: rgba(255,255,255,0.5);}
+	select.brselect2 {cursor: pointer; color: black; background-color: rgba(255,255,0,0.5);}
+	select.brselect3 {cursor: pointer; color: black; font-size: 14px; background-color: rgba(0,0,255,0.2);}
+
+	div.menu_m { display: none; }
+	div.omenu_m { display: none; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.5s linear; }
+
+	.logout { 
+		height: 25px;
+		font-family: "Lucida Sans"; position: fixed; left: 0; top: 0;
+		background-image: linear-gradient(darkslategrey,yellowgreen);
+		z-index: 991; font-size: 0.8em; display: inline-block; color: white;
+		margin-top: 8px; padding: 3px 10px 2px 0;
+		border-radius: 0 15px 15px 0;
+	}
+	.logout span { line-height: 20px; }
+
+	.topmenu {
+   	width: 100%; overflow: auto; min-height: 25px;
+   	background-color: rgba(255,0,0,0.5); border-bottom: 1px solid rgba(255,255,255,0.8);
+   	font-family: sans-serif; position: fixed; left: 0; top: 40px;
+   	z-index: 989; font-size: 0.8em; display: block;
+	}
+
+	.topmenu span {
+   	height: 25px; margin-left: 10px; padding-left: 5px; padding-right: 5px;
+   	border-bottom: 1px solid blue;
+	}
+	.topmenu span:hover { border: none; background-color: blue; color: white; cursor: pointer; }
+
+	.topmenu span.tmenu {
+   	height: 25px; margin-left: 10px; padding-left: 5px; padding-right: 5px;
+   	background-color: rgba(255,255,255,0.5); border-bottom: 1px solid green;
+	}
+	.topmenu span.tmenu:hover { 
+		border: none; background-color: orange; color: white; text-shadow: 1px 1px 1px black; 
+	}
+	span.tmenu2 { background-color: lightgreen; border: none; color: black; padding-top: 3px; padding-bottom: 3px; }
+	span.tmenu2:hover {  background-color: lightgreen; border: none; color: black; }
+
+	.septopmenu { height: 36px; }
+
+	#iddvinfo1 {
+		color: white; font-size: 1em;
+		min-width: 100px;
+		max-width: 80%;
+		min-height: 100px;
+		background-color: navy;
+		padding: 10px;
+		border-radius: 10px;
+		position: fixed;
+		z-index: 993;
+		// box shadow
+		box-shadow: 0 3px 5px rgba(0,0,0,0.9);
+		 -webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.9);
+		 -moz-box-shadow: 0 3px 5px rgba(0,0,0,0.9);
+		 -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color=' + "'#000000'" + '")";
+		filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color=' + "'#000000'" + '");
+		// end box xhadow
+	}
+
+	.footer { position: fixed; }
+	.footer span::before { content: "Copyright ";}
+
+	// animation underline left to right word
+	.sliding-u-l-r { display: inline-block; }
+	.sliding-u-l-r:after {
+		content: "";
+		display: block;
+		height: 3px;
+		width: 0;
+		background: transparent;
+		transition: width .5s ease, background-color .5s ease;
+	}
+	.sliding-u-l-r:hover:after { width: 100%; background: white; }
+	// end animation
+
+	#spanerr1 { display: block; }
+
+	div.container { width: 99%;
+	    -moz-border-radius: 5px;
+		 -webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+	div.container1 { width: 2500px; }
+
+	div.container, div.container1 {
+		padding: 5px; height: auto;
+		color: white; text-shadow: -1px 1px 1px black, 0 -1px 1px grey; font-weight: bold;
+  		 -moz-box-shadow: 0px 3px 5px black;
+  		 -webkit-box-shadow: 0px 3px 5px black;
+		// For IE 8
+		 -ms-filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+		// For IE 5.5 - 7 
+		filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+		background: lightgrey;
+   	background: transparent\9;
+   	background:rgba(0,0,0,0.5);
+   	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66888888,endColorstr=#66888888);
+   	zoom: 1;
+		border: 1px inset grey;
+		behavior: url("https://ianicakomputek.github.io/pos/pie/PIE.htc");
+	}
+
+	div.container:nth-child(n) {
+   	filter: none;
+	}
+
+	div.brform {
+		display: table; width: 100%;
+		 -moz-border-radius: 5px;
+		 -webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+	div.brform, div.brform1 {
+		color: black; text-shadow: none; font-weight: normal; font-family: sans-serif;
+   	background:rgba(255,255,255,0.7);
+		padding: 5px;
+		behavior: url("https://ianicakomputek.github.io/pos/pie/PIE.htc");
+	}
+
+	.brtb1 {
+		padding: 2px;
+		border: solid 1px white;
+		background: #7BC4EF;
+ 		background-color: rgba(0,0,255,0.3);
+		 -moz-border-radius: 5px;
+		 -webkit-border-radius: 5px;
+		border-radius: 5px;
+		behavior: url("https://ianicakomputek.github.io/pos/pie/PIE.htc");
+	}
+
+	.brth1 {
+		color: navy;
+		background-color: #7BC4EF;
+		 -moz-border-radius: 3px;
+		 -webkit-border-radius: 3px;
+		border-radius: 3px;
+		padding-left: 3px; padding-right: 3px;
+	}
+
+	.brtd1 {
+		color: black; text-shadow: 1px 1px 1px white;
+		background-color: #7BC4EF;
+		background-color: rgba(255,255,255,0.3);
+	}
+
+	.brtd2 {
+		color: black; text-shadow: 1px 1px 1px white;
+		background-color: #7BC4EF;
+		background-color: rgba(255,255,255,0.6);
+	}
+
+	.info1 {
+		margin: 5px auto; left: 0; right: 0;
+		text-align: center; text-shadow: none; padding: 5px;
+  		color: black; font-size: 1em;
+		background-color: lime; border: 1px solid grey;
+	}
+
+	span.link1 { line-height: 25px; }
+	span.link1 a { line-height: 25px; }
+
+} // END KOMPUTER PC LAPTOP
