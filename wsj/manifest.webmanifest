@@ -14,25 +14,25 @@
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "\/gambar/favicon36.png",
+            "src": "https://raw.githubusercontent.com/ianicakomputek/pos/master/wsj/favicon36.png",
             "sizes": "36x36",
             "type": "image\/png",
             "density": "0.75"
         },
         {
-            "src": "\/gambar/favicon72.png",
+            "src": "https://raw.githubusercontent.com/ianicakomputek/pos/master/wsj/favicon72.png",
             "sizes": "72x72",
             "type": "image\/png",
             "density": "1.5"
         },
         {
-            "src": "\/gambar/favicon144.png",
+            "src": "https://raw.githubusercontent.com/ianicakomputek/pos/master/wsj/favicon144.png",
             "sizes": "144x144",
             "type": "image\/png",
             "density": "3.0"
         },
         {
-            "src": "\/gambar/favicon288.png",
+            "src": "https://raw.githubusercontent.com/ianicakomputek/pos/master/wsj/favicon288.png",
             "sizes": "288x288",
             "type": "image\/png",
             "density": "4.0"
