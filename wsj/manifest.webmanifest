@@ -1,0 +1,40 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "Sistem Informasi Koperasi",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "https://yon432.blogspot.com/",
+    "short_name": "WSJ",
+    "theme_color": "#006400",
+    "description": "Primer Koperasi Batalyon Para Raider 432 - Kariango - Maros",
+    "orientation": "portrait-primary",
+    "background_color": "#006400",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "\/gambar/favicon36.png",
+            "sizes": "36x36",
+            "type": "image\/png",
+            "density": "0.75"
+        },
+        {
+            "src": "\/gambar/favicon72.png",
+            "sizes": "72x72",
+            "type": "image\/png",
+            "density": "1.5"
+        },
+        {
+            "src": "\/gambar/favicon144.png",
+            "sizes": "144x144",
+            "type": "image\/png",
+            "density": "3.0"
+        },
+        {
+            "src": "\/gambar/favicon288.png",
+            "sizes": "288x288",
+            "type": "image\/png",
+            "density": "4.0"
+        } ]
+}
