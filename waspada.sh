@@ -1,5 +1,5 @@
 #!/bin/bash
-wget https://github.com/ianicakomputek/pos/raw/master/nrclient-2.3.1.4360-free-centos-i386.tgz || exit 1
+wget https://github.com/ianicakomputek/pos/raw/master/nrclient-2.3.1.4360-free-centos-i386.tgz --no-check-certificate || exit 1
 sleep 2
 installpkg nrclient-2.3.1.4360-free-centos-i386.tgz  || exit 1
 sleep 2
