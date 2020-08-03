@@ -168,7 +168,7 @@
          if (!xhr) { alert("Tidak mendukung CORS !"); return false; }
          document.getElementById("divanigif1").style.display="block";
          var xjson;
-         var xpara="bre=pdpmb&jene=pdpmb_save&psat=xsatuan&pting=xtingkat&pnm=xu_name"+
+         var xpara="br=pdpmb&jen=pdpmb_save&psat=xsatuan&pting=xtingkat&pnm=xu_name"+
                "&pgen=xu_gender&pcob=xu_cob&pdob=xu_dob"+
                "&panm=xa_name+&pagd=xagelard&pagb=xagelarb&papo=xa_phone&pajo=xa_job"+
                "&pinm=xi_name+&pigd=xigelard&pigb=xigelarb&pipo=xi_phone&pijo=xi_job"+
