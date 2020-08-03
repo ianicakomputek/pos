@@ -200,12 +200,13 @@
                      ctx.fillStyle = "black";
                      ctx.fillText('Al-Izhar Cendekia - Makassar', 10, 20);
                      ctx.fillText('PPDB Online', 10, 50);
-                     ctx.fillText('Nama Calon Murid', 10, 100);
-                     ctx.fillText(xjson.ju_name+" ("+xu_gender+")", 30, 120);
-                     ctx.fillText('Satuan/Tingkat', 10, 140);
-                     ctx.fillText(xjson.jsatuan+" / "+xjson.jtingkat, 30, 160);
-                     ctx.fillText('Kontak', 10, 180);
-                     ctx.fillText(xjson.ji_name+" "+xi_phone, 30, 200);
+                     ctx.fillText('No. Pendaftaran: reg'+xjson.jnote, 10, 70);
+                     ctx.fillText('Nama Calon Murid', 10, 120);
+                     ctx.fillText(xjson.ju_name+" ("+xu_gender+")", 30, 140);
+                     ctx.fillText('Satuan/Tingkat', 10, 160);
+                     ctx.fillText(xjson.jsating, 30, 180);
+                     ctx.fillText('Kontak', 10, 200);
+                     ctx.fillText(xjson.ji_name+" "+xi_phone, 30, 220);
                      document.getElementById("blokinfo").style.display="block";
                   }
                }
