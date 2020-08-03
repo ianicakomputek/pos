@@ -174,17 +174,18 @@
                "&pinm=xi_name+&pigd=xigelard&pigb=xigelarb&pipo=xi_phone&pijo=xi_job"+
                "&peml=xu_email"+
                "&pper=xu_perum&pjl=xu_jl&pdsk=xu_dskel&pkpo=xu_kdpos&pkec=xu_kec&pcit=xu_city";
-         alert(xpara);
          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
          xhr.onload = function() {
             if (xhr.status === 200) {
                xjson = JSON.parse(xhr.responseText);
                if (xjson.jstatus=="0") {
-                  document.getElementById("divanigif1").style.display="none";
                   alert(xjson.jnote);
                } else if (xjson.jstatus=="1") {
-                  alert(xjson.jnote);
+                  document.getElementById("formbase").style.display="none";
+                  document.getElementById("blokinfo").innerHTML=xjson.jnote;
+                  document.getElementById("blokinfo").style.display="block";
                }
+               document.getElementById("divanigif1").style.display="none";
             } else if (xhr.status !== 200) {
                alert('Request failed.  Returned status of ' + xhr.status);
             }
