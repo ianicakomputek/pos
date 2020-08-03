@@ -211,6 +211,7 @@
                         ctx.fillText(xu_email.value, 30, 240);
                      }
                      today=new Date();
+                     ctx.font = '10px serif';
                      ctx.fillText(today, 10, 300);
                      document.getElementById("blokinfo").style.display="block";
                   }
