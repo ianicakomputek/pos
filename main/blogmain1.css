@@ -7,7 +7,7 @@ body {
 
 .divanigif1 {
    display: none; position: fixed; width: 100%; margin: 0 auto; top: 0; bottom: 0; z-index: 995; 
-   background-image: url("/gambar/speedom1.gif"), linear-gradient(rgba(0,255,0,0.8),greenyellow);
+   background-image: url("https://raw.githubusercontent.com/ianicakomputek/pos/master/speedom1.gif"), linear-gradient(rgba(0,255,0,0.8),greenyellow);
    background-repeat: no-repeat, no-repeat;
    background-position: center 30%, center center;
    color: white; text-align: center;
