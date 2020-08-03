@@ -167,12 +167,12 @@
          if (!xhr) { alert("Tidak mendukung CORS !"); return false; }
          document.getElementById("divanigif1").style.display="block";
          var xjson;
-         var xpara="br=pdpmb&jen=pdpmb_save&psat=xsatuan&pting=xtingkat&pnm=xu_name"+
-               "&pgen=xu_gender&pcob=xu_cob&pdob=xu_dob"+
-               "&panm=xa_name+&pagd=xagelard&pagb=xagelarb&papo=xa_phone&pajo=xa_job"+
-               "&pinm=xi_name+&pigd=xigelard&pigb=xigelarb&pipo=xi_phone&pijo=xi_job"+
-               "&peml=xu_email"+
-               "&pper=xu_perum&pjl=xu_jl&pdsk=xu_dskel&pkpo=xu_kdpos&pkec=xu_kec&pcit=xu_city";
+         var xpara="br=pdpmb&jen=pdpmb_save&psat="+xsatuan+"&pting="+xtingkat+"&pnm="+xu_name+
+               "&pgen="+xu_gender+"&pcob="+xu_cob+"&pdob="+xu_dob+
+               "&panm="+xa_name+"&pagd="+xagelard+"&pagb="+xagelarb+"&papo="+xa_phone+"&pajo="+xa_job+
+               "&pinm="+xi_name+"&pigd="+xigelard+"&pigb="+xigelarb+"&pipo="+xi_phone+"&pijo="+xi_job+
+               "&peml="+xu_email+
+               "&pper="+xu_perum+"&pjl="+xu_jl+"&pdsk="+xu_dskel+"&pkpo="+xu_kdpos+"&pkec="+xu_kec+"&pcit="+xu_city;
          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
          xhr.onload = function() {
             if (xhr.status === 200) {
