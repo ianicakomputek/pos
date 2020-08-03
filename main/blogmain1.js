@@ -177,13 +177,23 @@
          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
          xhr.onload = function() {
             if (xhr.status === 200) {
-               xjson = JSON.parse(xhr.responseText);
-               if (xjson.jstatus=="0") {
-                  alert(xjson.jnote);
-               } else if (xjson.jstatus=="1") {
+               try {
+                  xjson = JSON.parse(xhr.responseText);
+               } catch(e) {
+                  xjson = "";
+               }
+               if (xjson=="") {
                   document.getElementById("formbase").style.display="none";
-                  document.getElementById("blokinfo").innerHTML=xjson.jnote;
+                  document.getElementById("blokinfo").innerHTML=xhr.responseText;
                   document.getElementById("blokinfo").style.display="block";
+               } else {
+                  if (xjson.jstatus=="0") {
+                     alert(xjson.jnote);
+                  } else if (xjson.jstatus=="1") {
+                     document.getElementById("formbase").style.display="none";
+                     document.getElementById("blokinfo").innerHTML=xjson.jnote;
+                     document.getElementById("blokinfo").style.display="block";
+                  }
                }
                document.getElementById("divanigif1").style.display="none";
             } else if (xhr.status !== 200) {
