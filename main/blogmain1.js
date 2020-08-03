@@ -206,13 +206,14 @@
                      ctx.fillText('Satuan/Tingkat', 10, 160);
                      ctx.fillText(xjson.jsating, 30, 180);
                      ctx.fillText('Kontak', 10, 200);
-                     ctx.fillText(xjson.ji_name+" "+xi_phone, 30, 220);
+                     ctx.fillText(xjson.ji_name, 30, 220);
+                     ctx.fillText(xi_phone, 30, 240);
                      if (xu_email.value!==null && brtrimin(xu_email.value)!=="") {
-                        ctx.fillText(xu_email.value, 30, 240);
+                        ctx.fillText(xu_email.value, 30, 260);
                      }
                      today=new Date();
                      ctx.font = '10px serif';
-                     ctx.fillText(today, 10, 300);
+                     ctx.fillText(today, 2, 305);
                      document.getElementById("blokinfo").style.display="block";
                   }
                }
