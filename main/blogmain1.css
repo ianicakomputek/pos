@@ -46,13 +46,17 @@ body {
 
 .formbase {
    display: flex; flex-direction: column; justify-content: start;
-   text-align: left; width: 99%; min-height: calc(100vh - 90px);
+   text-align: left; width: 99%; min-height: calc(100vh - 50px);
 }
 
 .formrow {
    align-items: center; width: 99%; flex-wrap: wrap; 
 }
 .formrow span { display: inline-block; white-space: nowrap; }
+
+.blokinfo {
+   display: none; text-align: center; width: 99%; min-height: calc(100vh - 50px);
+}
 
 textarea { font-size: 16px; }
 
