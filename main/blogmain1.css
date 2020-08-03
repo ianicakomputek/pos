@@ -1,0 +1,136 @@
+html, body { width: 100%; }
+body { 
+   overscroll-behavior-y: none; margin: 0px; padding: 0px; height: 100%; line-height: 1; 
+   background-color: #ffffff; color: #000000; font-size: 16px;
+   overflow: hidden;
+}
+
+.divanigif1 {
+   display: none; position: fixed; width: 100%; margin: 0 auto; top: 0; bottom: 0; z-index: 995; 
+   background-image: url("/gambar/speedom1.gif"), linear-gradient(rgba(0,255,0,0.8),greenyellow);
+   background-repeat: no-repeat, no-repeat;
+   background-position: center 30%, center center;
+   color: white; text-align: center;
+}
+
+.header { 
+   position: fixed; width: 100%; height: 50px; margin: 0px; top: 0px; left: 0px; 
+   box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 900;
+   overflow: hidden;
+}
+.cohead { 
+   width: 100%; height: 50px; line-height: 50px;
+}
+.spclname { display: inline-block; padding-left: 2px; color: white; text-shadow: 1px 1px 1px black; line-height: 24px; }
+
+.container {
+   margin-top: 50px; width: 100%; text-align: center; background-color: rgba(0,0,0,0.2);
+   overflow-y: scroll;
+}
+
+.sploading { display: block; text-align: center; line-height: 100px; }
+.sploading:after { content: "Loading"; }
+
+.splh5 { display: block; line-height: 5px; }
+.splh10 { display: block; line-height: 10px; }
+.splh30 { display: block; line-height: 30px; }
+
+.disblc { display: block; }
+.disinblc { display: inline-block; }
+
+.tacenter { text-align: center; } 
+
+.bfwhite { color: white; }
+.bgslgrey { background-color: slategrey; }
+.bf14 { font-size: 14px; }
+
+.formbase {
+   display: flex; flex-direction: column; justify-content: start;
+   text-align: left; width: 99%; min-height: calc(100vh - 90px);
+}
+
+.formrow {
+   align-items: center; width: 99%; flex-wrap: wrap; 
+}
+.formrow span { display: inline-block; white-space: nowrap; }
+
+textarea { font-size: 16px; }
+
+input[type=radio], input[type=checkbox], input[type=text], input[type=password], input[type=time], input[type=tel], input[type=email], input.btnlogin, input.insimpan, input.inbtnreg, input.inbtnwar, input.inbtnmenu, select { 
+   font-size: 16px; height: 38px;
+}
+select option { padding: 5px 0; }
+input[type=radio], input[type=checkbox] { vertical-align: middle; }
+
+input[type=text], input[type=password], input[type=tel], input[type=email], select, textarea {
+   width: 98%;
+}
+input:read-only { background-color: grey; }
+
+input.insimpan, input.inbtnreg, input.inbtnwar, input.inbtnmenu {
+   border: none; border-radius: 3px;
+}
+input.insimpan:focus, input.inbtnreg:focus, input.inbtnwar:focus, input.inbtnmenu:focus { outline: none; }
+
+   input[type=text], input[type=password], input[type=tel], input[type=email] { transition: background-color 1s ease; }
+   select { transition: background-color 1s ease; }
+   select[id^="xting"] { display: none; }
+   span[id^="spugen"] { width: 20%; transition:  background-color 1s ease; }
+   span[id^="spuabk"] { width: 20%; transition:  background-color 1s ease; }
+
+   .splabelon, .splabeloff { 
+               padding-left: 5px; padding-right: 5px; border-radius: 5px;
+            }
+   .splabelon { 
+               background-color: rgba(255,255,0,0.5);
+               border: 1px outset white;
+            }
+   .splabeloff { 
+               background-color: rgba(255,255,255,0.2);
+            }
+   .splabelon2, .splabeloff2 { 
+               line-height: 22px;
+            }
+
+   .spblink {
+      display: inline;
+      color: inherit;
+      animation: blink 1s steps(1) infinite;
+      -webkit-animation: blink 1s steps(1) infinite;
+   }
+   @keyframes blink { 50% { color: transparent; } }
+   @-webkit-keyframes blink { 50% { color: transparent; } }
+
+@media only screen and (max-width: 599px) {
+   .resw48p { width: 48%; }
+   .resw100p { width: 100%; }
+   input.resw48p { width: 48%; }
+            .spclosemodal1 { float: right}
+            .tbs_cont1 { width: 90%; }
+            select.sele98p { width: 98%; transition: background-color 1s ease; }
+}
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+}
+@media only screen and (min-width: 768px) {
+   .formrow span { width: 200px; }
+
+   select.sele200 { width: 200px; transition: background-color 1s ease; }
+   select.sele400 { width: 400px; transition: background-color 1s ease; }
+   span[id^="spugen"] { width: 100px; transition: background-color 1s ease; }
+   span[id^="spuabk"] { width: 100px; transition: background-color 1s ease; }
+
+   .resw500 { width: 500px; }
+   .resw300 { width: 300px; }
+   .resw200 { width: 200px; }
+
+   input[type=text], input[type=password], input[type=tel], input[type=email] { width: 300px; }
+   input.resw195 { width: 195px; }
+   input.resw300 { width: 300px; }
+   input.inbtnmenu { width: 400px; }
+
+   select.resw195 { width: 195px; }
+   select.resw300 { width: 300px; }
+   textarea { width: 300px; }
+}
+
+.bf2em { font-size: 2em; }
