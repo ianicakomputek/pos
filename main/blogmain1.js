@@ -207,6 +207,11 @@
                      ctx.fillText(xjson.jsating, 30, 180);
                      ctx.fillText('Kontak', 10, 200);
                      ctx.fillText(xjson.ji_name+" "+xi_phone, 30, 220);
+                     if (xu_email.value!==null && brtrimin(xu_email.value)!=="") {
+                        ctx.fillText(xu_email.value, 30, 240);
+                     }
+                     today=new Date();
+                     ctx.fillText(today, 10, 300);
                      document.getElementById("blokinfo").style.display="block";
                   }
                }
