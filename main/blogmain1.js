@@ -201,11 +201,11 @@
                      ctx.fillText('Al-Izhar Cendekia - Makassar', 10, 20);
                      ctx.fillText('PPDB Online', 10, 50);
                      ctx.fillText('No. Pendaftaran: reg'+xjson.jnote, 10, 70);
-                     ctx.fillText('Nama Calon Murid', 10, 120);
+                     ctx.fillText('Nama Calon Murid:', 10, 120);
                      ctx.fillText(xjson.ju_name+" ("+xu_gender+")", 30, 140);
-                     ctx.fillText('Satuan/Tingkat', 10, 160);
+                     ctx.fillText('Satuan/Tingkat:', 10, 160);
                      ctx.fillText(xjson.jsating, 30, 180);
-                     ctx.fillText('Kontak', 10, 200);
+                     ctx.fillText('Kontak:', 10, 200);
                      ctx.fillText(xjson.ji_name, 30, 220);
                      ctx.fillText(xi_phone, 30, 240);
                      if (xu_email.value!==null && brtrimin(xu_email.value)!=="") {
