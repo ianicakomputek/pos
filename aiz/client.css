@@ -1,6 +1,6 @@
 .cohead { background-image: linear-gradient(blue,cyan); }
 .bfuserlogin { text-shadow: none; color: blue; }
-.container { background-color: rgb(176,224,230); }
+.container { background-color: rgb(176,224,230); color: black; }
 .cofoot { background-color: lightskyblue; }
 
 input.btnlogin, input.insimpan { background-image: linear-gradient(blue,cyan); color: white;}
