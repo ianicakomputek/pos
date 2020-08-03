@@ -192,15 +192,20 @@
                   } else if (xjson.jstatus=="1") {
                      document.getElementById("formbase").style.display="none";
                      var ctx = document.getElementById("xcanvas").getContext('2d');
+                     ctx.rect(0, 0, 320, 320);
+                     ctx.fillStyle = "white";
+                     ctx.fill();                     
                      var img = document.getElementById("iwtm");
                      ctx.drawImage(img, 60, 60);                     
-                     ctx.font = '18px serif';
+                     ctx.font = '14px serif';
                      ctx.fillText('Al-Izhar Cendekia - Makassar', 10, 10);
-                     ctx.fillText('PPDB Online', 10, 20);
-                     ctx.fillText('Nama Calon Murid', 10, 30);
-                     ctx.fillText(xu_name, 10, 40);
-                     ctx.fillText(xu_satuan, 10, 50);
-                     ctx.fillText(xu_tingkat, 10, 60);
+                     ctx.fillText('PPDB Online', 10, 30);
+                     ctx.fillText('Nama Calon Murid', 10, 50);
+                     ctx.fillText(xu_name+" ("+xu_gender+")", 30, 70);
+                     ctx.fillText('Satuan/Tingkat', 10, 90);
+                     ctx.fillText(xsatuan+" / "+xtingkat, 30, 110);
+                     ctx.fillText('Kontak', 10, 130);
+                     ctx.fillText(xi_name+" "+xi_phone, 30, 150);
                      document.getElementById("blokinfo").style.display="block";
                   }
                }
