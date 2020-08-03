@@ -1,0 +1,47 @@
+.cohead { background-image: linear-gradient(blue,cyan); }
+.bfuserlogin { text-shadow: none; color: blue; }
+.container { background-color: rgb(176,224,230); }
+.cofoot { background-color: lightskyblue; }
+
+input.btnlogin, input.insimpan { background-image: linear-gradient(blue,cyan); color: white;}
+input.inbtnreg { background-image: linear-gradient(grey,lightblue); }
+input.btnlogin:hover, input.insimpan:hover {
+   cursor: pointer; color: white;
+   background-image: linear-gradient(cyan,blue); border: 1px outset white; border-radius: 3px;
+}  
+input.inbtnreg:hover {
+   cursor: pointer;
+   background-image: linear-gradient(deepskyblue,grey); border: 1px outset white ; border-radius: 3px;
+}
+
+input[type=text], input[type=password], input[type=tel], input[type=email], select, textarea {
+   border: 1px inset rgba(255,255,255,0.5);
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=email]:focus, select:focus, textarea:focus {
+	background-color: deepskyblue; outline: none; border: 1px inset white;
+}
+input[type=text]:hover, input[type=password]:hover, input[type=tel]:hover, input[type=email]:hover, select:hover, textarea:hover {
+	cursor: pointer; background-color: deepskyblue; border: 1px inset white;
+}
+
+span[class^="sptype"]:hover { cursor: pointer; background-color: rgba(123,104,238,0.5);} 
+.spon { background-color: rgba(123,104,238,0.5); }
+
+
+/* tablet */
+@media only screen and (min-width: 600px) {
+   .splogout:hover { cursor: pointer; background-color: hotpink; color: black; }
+   .submenu { background-image: linear-gradient(deepskyblue,aliceblue); }
+   div[class^="smenu"] span {
+      background-image: linear-gradient(to right, rgb(0,206,209), lightblue);
+   }
+}
+/* pc */
+@media only screen and (min-width: 768px) {
+   .splogout:hover { cursor: pointer; background-color: hotpink; color: black; }
+   .submenu { background-image: linear-gradient(deepskyblue,aliceblue); }
+   div[class^="smenu"] span {
+      background-image: linear-gradient(to right, rgb(0,206,209), lightblue);
+   }
+}
