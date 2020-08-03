@@ -160,7 +160,6 @@
 
          var xigelard=document.getElementById("xigelard").value;
          var xigelarb=document.getElementById("xigelarb").value;
-         var xi_phone=document.getElementById("xi_phone");
          var xi_job=document.getElementById("xi_job").value;
 
          var xurl="https://alizhar.toha20.com/cgi-bin/bcrudpub.cgi";
@@ -199,14 +198,14 @@
                      ctx.drawImage(img, 60, 60);                     
                      ctx.font = '14px serif';
                      ctx.fillStyle = "black";
-                     ctx.fillText('Al-Izhar Cendekia - Makassar', 10, 10);
-                     ctx.fillText('PPDB Online', 10, 30);
-                     ctx.fillText('Nama Calon Murid', 10, 50);
-                     ctx.fillText(xu_name+" ("+xu_gender+")", 30, 70);
-                     ctx.fillText('Satuan/Tingkat', 10, 90);
-                     ctx.fillText(xsatuan+" / "+xtingkat, 30, 110);
-                     ctx.fillText('Kontak', 10, 130);
-                     ctx.fillText(xi_name+" "+xi_phone, 30, 150);
+                     ctx.fillText('Al-Izhar Cendekia - Makassar', 10, 20);
+                     ctx.fillText('PPDB Online', 10, 50);
+                     ctx.fillText('Nama Calon Murid', 10, 100);
+                     ctx.fillText(xjson.ju_name+" ("+xu_gender+")", 30, 120);
+                     ctx.fillText('Satuan/Tingkat', 10, 140);
+                     ctx.fillText(xjson.jsatuan+" / "+xjson.jtingkat, 30, 160);
+                     ctx.fillText('Kontak', 10, 180);
+                     ctx.fillText(xjson.ji_name+" "+xi_phone, 30, 200);
                      document.getElementById("blokinfo").style.display="block";
                   }
                }
