@@ -198,6 +198,7 @@
                      var img = document.getElementById("iwtm");
                      ctx.drawImage(img, 60, 60);                     
                      ctx.font = '14px serif';
+                     ctx.fillStyle = "black";
                      ctx.fillText('Al-Izhar Cendekia - Makassar', 10, 10);
                      ctx.fillText('PPDB Online', 10, 30);
                      ctx.fillText('Nama Calon Murid', 10, 50);
