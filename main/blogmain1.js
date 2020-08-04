@@ -1,4 +1,11 @@
    function br_dtpd_email() {
+      xfile=document.getElementById("xreg_id").value;
+      xlink=document.getElementById("linkdl");
+      ctx = document.getElementById("xcanvas");
+      dt = ctx.toDataURL("image/jpeg", 1.0);
+      fname = "reg"+xfile+".jpg";
+      xlink.setAttribute("href",dt);
+      xlink.setAttribute("download",fname);
       spem=document.getElementById("sp_email");
       spdl=document.getElementById("sp_dload");
       spem.style.display="none";
@@ -224,12 +231,6 @@
                      ctx.fillText(today, 2, 305);
                      document.getElementById("blokinfo").style.display="block";
                      document.getElementById("xtoemail").value=xjson.jtoemail;
-
-                     xlink=document.getElementById("linkdl");
-                     dt = document.getElementById("xcanvas").toDataURL("image/jpeg", 1.0);
-                     fname = "reg"+xjson.jnote+".jpg";
-                     xlink.setAttribute("href",dt);
-                     xlink.setAttribute("download",fname);
                   }
                }
                document.getElementById("divanigif1").style.display="none";
