@@ -224,7 +224,10 @@
                      ctx.fillText(today, 2, 305);
                      document.getElementById("blokinfo").style.display="block";
                      document.getElementById("xtoemail").value=xjson.jtoemail;
-                     document.getElementById("xreg_id").value=xjson.jnote;
+
+                     xlink=document.getElementById("linkdl");
+                     xlink.setAttribute("href",ctx.toDataURL("image/jpeg"));
+                     xlink.setAttribute("download","reg"+xjson.jnote+".jpg");
                   }
                }
                document.getElementById("divanigif1").style.display="none";
