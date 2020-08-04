@@ -10,8 +10,17 @@
       spdl=document.getElementById("sp_dload");
       spem.style.display="none";
       spdl.style.display="block";
-      xele=document.getElementById("xtoemail").value;
-      alert(xele);
+      var xele=document.getElementById("xtoemail").value;
+      if (xele=='x') {
+         alert("Email tidak terkirim, silahkan download form dan kirim via WA.");
+      } else {
+         xto  = xele;
+         xsu  = "PPDB No. reg"+document.getElementById("xreg_id").value;
+         xbd  = document.getElementById("xebody").value;
+         alert("to: "+xto);
+         alert("subject: "+xsu);
+         alert("isi: "+xbd);
+      }
    }
    function brtrimin(xarg) { 
       return xarg.replace(/^\s+|\s+$/g,''); 
@@ -231,6 +240,8 @@
                      ctx.fillText(today, 2, 305);
                      document.getElementById("blokinfo").style.display="block";
                      document.getElementById("xtoemail").value=xjson.jtoemail;
+                     document.getElementById("xreg_id").value=xjson.jnote;
+                     document.getElementById("xebody").value=xjson.ju_name+","+xu_gender+","+xjson.jsating+","+xjson.ji_name+","+xi_phone+","+xu_email.value;
                   }
                }
                document.getElementById("divanigif1").style.display="none";
