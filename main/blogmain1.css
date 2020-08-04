@@ -56,7 +56,6 @@ body {
 
 .blokinfo {
    display: none; text-align: center; width: 99%; min-height: calc(100vh - 50px);
-   padding-top: 100px;
 }
 
 textarea { font-size: 16px; }
