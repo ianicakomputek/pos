@@ -1,4 +1,8 @@
    function br_dtpd_email() {
+      spem=document.getElementById("sp_email");
+      spdl=document.getElementById("sp_dload");
+      spem.style.display="none";
+      spdl.style.display="block";
       xele=document.getElementById("xtoemail").value;
       alert(xele);
    }
