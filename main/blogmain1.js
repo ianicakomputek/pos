@@ -226,8 +226,10 @@
                      document.getElementById("xtoemail").value=xjson.jtoemail;
 
                      xlink=document.getElementById("linkdl");
-                     xlink.setAttribute("href",ctx.toDataURL("image/jpeg"));
-                     xlink.setAttribute("download","reg"+xjson.jnote+".jpg");
+                     dt = ctx.toDataURL("image/jpeg");
+                     fname = "reg"+xjson.jnote+".jpg";
+                     xlink.setAttribute("href",dt);
+                     xlink.setAttribute("download",fname);
                   }
                }
                document.getElementById("divanigif1").style.display="none";
