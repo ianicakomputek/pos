@@ -226,7 +226,7 @@
                      document.getElementById("xtoemail").value=xjson.jtoemail;
 
                      xlink=document.getElementById("linkdl");
-                     dt = ctx.toDataURL("image/jpeg");
+                     dt = document.getElementById("xcanvas").toDataURL("image/jpeg", 1.0);
                      fname = "reg"+xjson.jnote+".jpg";
                      xlink.setAttribute("href",dt);
                      xlink.setAttribute("download",fname);
