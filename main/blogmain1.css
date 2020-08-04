@@ -138,4 +138,4 @@ input.insimpan:focus, input.inbtnreg:focus, input.inbtnwar:focus, input.inbtnmen
 }
 
 .bf2em { font-size: 2em; }
-a.linkdl { line-height: 40px; background-color: slategrey; color white; border-radius: 3px; border: 1px outset white; }
+a.linkdl { line-height: 40px; background-color: yellow; border-radius: 5px; border: 1px outset white; }
