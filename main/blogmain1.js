@@ -1,3 +1,7 @@
+   function br_dtpd_email() {
+      xele=document.getElementById("xtoemail").value;
+      alert(xele);
+   }
    function brtrimin(xarg) { 
       return xarg.replace(/^\s+|\s+$/g,''); 
    }
