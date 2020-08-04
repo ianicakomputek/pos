@@ -216,6 +216,7 @@
                      ctx.fillText(today, 2, 305);
                      document.getElementById("blokinfo").style.display="block";
                      document.getElementById("xtoemail").value=xjson.jtoemail;
+                     document.getElementById("xreg_id").value=xjson.jnote;
                   }
                }
                document.getElementById("divanigif1").style.display="none";
