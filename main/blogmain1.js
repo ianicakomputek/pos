@@ -207,8 +207,8 @@
                }
                if (xjson=="") {
                   document.getElementById("formbase").style.display="none";
-                  document.getElementById("blokinfo").innerHTML=xhr.responseText;
-                  document.getElementById("blokinfo").style.display="block";
+                  document.getElementById("formfinal").innerHTML=xhr.responseText;
+                  document.getElementById("formfinal").style.display="block";
                } else {
                   if (xjson.jstatus=="0") {
                      alert(xjson.jnote);
@@ -238,7 +238,7 @@
                      today=new Date();
                      ctx.font = '10px serif';
                      ctx.fillText(today, 2, 305);
-                     document.getElementById("blokinfo").style.display="block";
+                     document.getElementById("formfinal").style.display="block";
                      document.getElementById("xtoemail").value=xjson.jtoemail;
                      document.getElementById("xreg_id").value=xjson.jnote;
                      document.getElementById("xebody").value=xjson.ju_name+","+xu_gender+","+xjson.jsating+","+xjson.ji_name+","+xi_phone+","+xu_email.value;
