@@ -24,7 +24,6 @@
          document.getElementById("divanigif1").style.display="block";
          var xjson;
          var xpara="pto="+xto+"&psu="+xsu+"&pbd="+xbd;
-         alert(xpara);
          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
          xhr.onload = function() {
             if (xhr.status === 200) {
