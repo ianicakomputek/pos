@@ -214,6 +214,13 @@
          var xigelarb=document.getElementById("xigelarb").value;
          var xi_job=document.getElementById("xi_job").value;
 
+         var xu_perum=document.getElementById("xu_perum").value;
+         var xu_jl=document.getElementById("xu_jl").value;
+         var xu_dskel=document.getElementById("xu_dskel").value;
+         var xu_kdpos=document.getElementById("xu_kdpos").value;
+         var xu_kec=document.getElementById("xu_kec").value;
+         var xu_city=document.getElementById("xu_city").value;
+
          var xurl="https://alizhar.toha20.com/cgi-bin/bcrudpub.cgi";
          var xhr=brdef_cors("post",xurl);
          if (!xhr) { alert("Tidak mendukung CORS !"); return false; }
@@ -223,7 +230,7 @@
                "&pgen="+xu_gender+"&pcob="+xu_cob+"&pdob="+xu_dob+
                "&panm="+xa_name+"&pagd="+xagelard+"&pagb="+xagelarb+"&papo="+xa_phone+"&pajo="+xa_job+
                "&pinm="+xi_name+"&pigd="+xigelard+"&pigb="+xigelarb+"&pipo="+xi_phone+"&pijo="+xi_job+
-               "&peml="+xu_email+
+               "&peml="+xu_email.value+
                "&pper="+xu_perum+"&pjl="+xu_jl+"&pdsk="+xu_dskel+"&pkpo="+xu_kdpos+"&pkec="+xu_kec+"&pcit="+xu_city;
          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
          xhr.onload = function() {
