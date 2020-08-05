@@ -208,7 +208,7 @@
          var xa_name=document.getElementById("xa_name").value;
          var xagelard=document.getElementById("xagelard").value;
          var xagelarb=document.getElementById("xagelarb").value;
-         var xa_phone=document.getElementById("xa_phone");
+         var xa_phone=document.getElementById("xa_phone").value;
          var xa_job=document.getElementById("xa_job").value;
 
          var xigelard=document.getElementById("xigelard").value;
