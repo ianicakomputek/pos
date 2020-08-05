@@ -17,9 +17,37 @@
          xto  = xele;
          xsu  = "PPDB No. reg"+document.getElementById("xreg_id").value;
          xbd  = document.getElementById("xebody").value;
-         alert("to: "+xto);
-         alert("subject: "+xsu);
-         alert("isi: "+xbd);
+
+         var xurl="thmailpub.cgi";
+         var xhr=brdef_cors("post",xurl);
+         if (!xhr) { alert("Tidak mendukung CORS !"); return false; }
+         document.getElementById("divanigif1").style.display="block";
+         var xjson;
+         var xpara="pto="+xto+"&psu="+xsu+"&pbd="+xbd;
+         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+         xhr.onload = function() {
+            if (xhr.status === 200) {
+               try {
+                  xjson = JSON.parse(xhr.responseText);
+               } catch(e) {
+                  xjson = "";
+               }
+               if (xjson=="") {
+                  /* bukan json, tampilkan hasil di browser */
+               } else {
+                  alert(xjson.jnote);
+                  if (xjson.jstatus=="0") {
+                     alert("Email tidak terkirim, silahkan download form nomor pendaftaran dan kirim via WA.");
+                  } else if (xjson.jstatus=="1") {
+                     alert("Silahkan download form nomor pendaftran.");
+                  }
+                  document.getElementById("divanigif1").style.display="none";
+               }
+            } else if (xhr.status !== 200) {
+               alert('Request failed.  Returned status of ' + xhr.status);
+            }
+         };
+         xhr.send(xpara);
       }
    }
    function brtrimin(xarg) { 
