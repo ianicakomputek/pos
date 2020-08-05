@@ -18,7 +18,7 @@
          xsu  = "PPDB No. reg"+document.getElementById("xreg_id").value;
          xbd  = document.getElementById("xebody").value;
 
-         var xurl="thmailpub.cgi";
+         var xurl="https://alizhar.toha20.com/cgi-bin/thmailpub.cgi";
          var xhr=brdef_cors("post",xurl);
          if (!xhr) { alert("Tidak mendukung CORS !"); return false; }
          document.getElementById("divanigif1").style.display="block";
