@@ -54,7 +54,7 @@ body {
 }
 .formrow span { display: inline-block; white-space: nowrap; }
 
-.formfinal {
+.formfinal, .blokinfo {
    display: none; text-align: center; width: 99%; min-height: calc(100vh - 50px);
 }
 
