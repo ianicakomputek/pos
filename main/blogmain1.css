@@ -38,6 +38,7 @@ body {
 .disblc { display: block; }
 .disinblc { display: inline-block; }
 
+.taleft { text-align: left; } 
 .tacenter { text-align: center; } 
 
 .bfwhite { color: white; }
