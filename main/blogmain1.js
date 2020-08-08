@@ -49,7 +49,7 @@
          };
          xhr.send(xpara);
       }
-      window.scrollTo(0, 0); 
+      document.getElementById("formfinal").scrollTo(0, 0); 
    }
    function brtrimin(xarg) { 
       return xarg.replace(/^\s+|\s+$/g,''); 
