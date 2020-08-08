@@ -49,6 +49,7 @@
          };
          xhr.send(xpara);
       }
+      document.getElementById("formfinal").scrollIntoView({behavior: "smooth", block: "start", inline: "center"});
    }
    function brtrimin(xarg) { 
       return xarg.replace(/^\s+|\s+$/g,''); 
