@@ -277,7 +277,7 @@
                      document.getElementById("formfinal").style.display="block";
                      document.getElementById("xtoemail").value=xjson.jtoemail;
                      document.getElementById("xreg_id").value=xjson.jnote;
-                     document.getElementById("xebody").value=xjson.ju_name+","+xu_gender+","+xjson.jsating+","+xjson.ji_name+","+xi_phone+","+xu_email.value;
+                     document.getElementById("xebody").value=xjson.ju_name+";"+xu_gender+";"+xjson.jsating+";"+xjson.ji_name+";"+xi_phone+";"+xu_email.value;
                   }
                }
                document.getElementById("divanigif1").style.display="none";
